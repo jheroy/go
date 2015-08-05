@@ -863,6 +863,15 @@ var vcsPaths = []*vcsPath{
 		check:  noVCSSuffix,
 	},
 
+	// code.ccplaying.com
+	{
+		prefix: "code.ccplaying.com/",
+		re:     `^(?P<root>code\.ccplaying\.com/(?P<p>.[A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+))(/[A-Za-z0-9_.\-]+)*$`,
+		vcs:    "git",
+		repo:   "git@code.ccplaying.com:{p}",
+		check:  noVCSSuffix,
+	},
+
 	// Bitbucket
 	{
 		prefix: "bitbucket.org/",
